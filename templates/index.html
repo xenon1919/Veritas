@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}New Research{% endblock %}
+{% block nav_new %}active{% endblock %}
+{% block topbar %}
+  <header class="topbar">
+    <div>
+      <h1>New Research</h1>
+      <div class="subtitle">Ask a question, get a cited report in seconds</div>
+    </div>
+    <span class="badge" id="stats-badge">· reports run</span>
+  </header>
+{% endblock %}
+{% block content %}
+  <div class="hero">
+    <h1>What do you want to know?</h1>
+    <p>The agent searches the web, reads multiple sources in parallel, and synthesizes a cited report.</p>
+  </div>
+
+  <div class="card api-key-card" id="api-key-card">
+    <div class="api-key-row">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex-shrink:0; color: var(--text-faint);"><rect x="3" y="7" width="10" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>
+      <input type="password" id="api-key-input" placeholder="Paste your Gemini API key" autocomplete="off" />
+      <button type="button" class="icon-btn" id="api-key-toggle">Show</button>
+    </div>
+    <p class="api-key-hint">
+      Stored only in your browser, sent directly with your request — never saved on our server.
+      Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>.
+    </p>
+  </div>
+
+  <form id="research-form" class="card">
+    <textarea id="question" rows="3" maxlength="500"
+      placeholder="e.g. What are the latest advances in solid-state batteries?" required></textarea>
+    <div class="form-footer">
+      <span class="char-count"><span id="char-count">0</span>/500</span>
+      <button type="submit" id="submit-btn" class="primary">
+        <span class="spinner"></span>
+        <span class="btn-label">Research</span>
+      </button>
+    </div>
+    <div class="suggestions">
+      <span class="chip" data-q="What are the latest advances in solid-state batteries?">Solid-state batteries</span>
+      <span class="chip" data-q="How does retrieval-augmented generation improve LLM accuracy?">RAG for LLMs</span>
+      <span class="chip" data-q="What caused the 2008 financial crisis?">2008 financial crisis</span>
+      <span class="chip" data-q="What are the health effects of intermittent fasting?">Intermittent fasting</span>
+    </div>
+  </form>
+
+  <div id="progress-section" class="hidden">
+    <div class="section-title">Pipeline</div>
+    <div class="pipeline">
+      <div class="pipeline-step" data-step="search">Search</div>
+      <div class="pipeline-step" data-step="read">Read Sources</div>
+      <div class="pipeline-step" data-step="synthesize">Synthesize</div>
+      <div class="pipeline-step" data-step="done">Done</div>
+    </div>
+    <ul id="progress-log" class="progress-log"></ul>
+  </div>
+
+  <div id="result-section" class="hidden">
+    <div class="section-title">Report</div>
+    <div class="card report-toolbar" style="padding: 0.6rem 1rem;">
+      <div class="report-meta">
+        <span id="result-duration"></span>
+        <span id="result-source-count"></span>
+      </div>
+      <button class="icon-btn" id="copy-btn">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="5" y="5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 10V3.5A1.5 1.5 0 0 1 4.5 2H10" stroke="currentColor" stroke-width="1.3"/></svg>
+        Copy
+      </button>
+    </div>
+    <article id="report-output" class="report"></article>
+    <div id="sources-panel" class="sources-panel"></div>
+  </div>
+
+  <script src="/static/markdown.js"></script>
+  <script src="/static/app.js"></script>
+{% endblock %}

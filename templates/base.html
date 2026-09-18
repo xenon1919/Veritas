@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Research Agent{% endblock %} · Veritas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%236c8cff%22/><text x=%2216%22 y=%2222%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-mark">V</span>
+        <span class="brand-name">Veritas<small>Web Research Agent</small></span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link {% block nav_new %}{% endblock %}" href="/">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          New Research
+        </a>
+        <a class="nav-link {% block nav_history %}{% endblock %}" href="/history">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 4v4l2.5 2.5M14 8A6 6 0 1 1 4 3.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 3v3h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          History
+        </a>
+      </nav>
+      <div class="sidebar-footer">Powered by Gemini · LangChain</div>
+    </aside>
+    <div class="main">
+      {% block topbar %}{% endblock %}
+      <main class="container">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+  <div id="toast-root"></div>
+  <script src="/static/toast.js"></script>
+</body>
+</html>

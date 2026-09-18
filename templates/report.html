@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Report{% endblock %}
+{% block topbar %}
+  <header class="topbar">
+    <div>
+      <h1><a href="/history" style="color: var(--text-faint); text-decoration: none;">History</a> / Report</h1>
+    </div>
+    <button class="icon-btn" id="copy-btn">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="5" y="5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 10V3.5A1.5 1.5 0 0 1 4.5 2H10" stroke="currentColor" stroke-width="1.3"/></svg>
+      Copy
+    </button>
+  </header>
+{% endblock %}
+{% block content %}
+  <div class="hero">
+    <h1 id="report-question">Loading…</h1>
+    <div class="report-meta" id="report-meta"></div>
+  </div>
+  <article id="report-output" class="report"></article>
+  <div id="sources-panel" class="sources-panel"></div>
+
+  <script>window.REPORT_ID = {{ report_id }};</script>
+  <script src="/static/markdown.js"></script>
+  <script src="/static/report.js"></script>
+{% endblock %}

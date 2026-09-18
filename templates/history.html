@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block nav_history %}active{% endblock %}
+{% block topbar %}
+  <header class="topbar">
+    <div>
+      <h1>History</h1>
+      <div class="subtitle">Every report the agent has produced</div>
+    </div>
+  </header>
+{% endblock %}
+{% block content %}
+  <div class="stats-row" id="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">Total Reports</div>
+      <div class="stat-value" id="stat-total">–</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Avg. Duration</div>
+      <div class="stat-value" id="stat-duration">–</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Latest</div>
+      <div class="stat-value" id="stat-latest" style="font-size:0.95rem;">–</div>
+    </div>
+  </div>
+
+  <ul id="history-list" class="history-list"></ul>
+
+  <script src="/static/history.js"></script>
+{% endblock %}

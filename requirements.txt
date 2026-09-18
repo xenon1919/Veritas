@@ -1,0 +1,8 @@
+flask
+gunicorn
+langchain-google-genai
+langchain-core
+ddgs
+requests
+beautifulsoup4
+python-dotenv
