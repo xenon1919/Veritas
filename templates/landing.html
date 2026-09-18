@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veritas · Autonomous Web Research Agent</title>
+  <meta name="description" content="Ask a question, get a cited research report in seconds. Veritas searches the web, reads multiple sources in parallel, and synthesizes a report with Gemini." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%236c8cff%22/><text x=%2216%22 y=%2222%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>V</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="landing-body">
+  <nav class="landing-nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">V</span>
+      <span class="brand-name">Veritas<small>Web Research Agent</small></span>
+    </a>
+    <div class="landing-nav-actions">
+      <a class="nav-text-link" href="/history">History</a>
+      <a class="primary-btn-link" href="/app">
+        Launch App
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <header class="landing-hero">
+    <span class="badge hero-badge">
+      <span class="status-dot"></span> Powered by Gemini
+    </span>
+    <h1>Research anything.<br /><span class="gradient-text">Cited in seconds.</span></h1>
+    <p class="landing-lede">
+      Ask a question. Veritas searches the live web, reads multiple sources in parallel,
+      and hands you back a synthesized report with every claim traced to its source.
+    </p>
+    <div class="landing-cta-row">
+      <a class="primary-btn-link large" href="/app">
+        Start Researching
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="icon-btn large" href="#how-it-works">See how it works</a>
+    </div>
+  </header>
+
+  <section class="steps-section" id="how-it-works">
+    <div class="section-title center">How it works</div>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Search</h3>
+        <p>Your question goes out across the live web to gather relevant, current sources.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Read — in parallel</h3>
+        <p>Every source is fetched and summarized concurrently, so a five-source report doesn't take five times as long.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Synthesize</h3>
+        <p>Gemini weaves the source notes into one report, citing each claim back to [1], [2], [3]&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="section-title center">Built for real use</div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>
+        </div>
+        <h3>Bring your own key</h3>
+        <p>Your Gemini API key stays in your browser and is used only for your own requests — never stored on our server.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8h3l2-5 3 10 2-5h2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Live progress</h3>
+        <p>Watch the pipeline work in real time — search, parallel reading, and synthesis, streamed as it happens.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 4v4l2.5 2.5M14 8A6 6 0 1 1 4 3.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 3v3h3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Full history</h3>
+        <p>Every report is saved and browsable later, with sources, timing, and a shareable link.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="landing-footer">
+    <span>Veritas — Autonomous Web Research Agent</span>
+    <a href="/app">Launch the app →</a>
+  </footer>
+</body>
+</html>

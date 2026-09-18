@@ -23,7 +23,8 @@ cp .env.example .env                  # optional — only needed for the CLI (se
 python app.py
 ```
 
-Open http://127.0.0.1:5000, paste a Gemini key (get one free at
+Open http://127.0.0.1:5000 — that's the marketing landing page. Click "Launch App" (or go
+straight to `/app`) to reach the research tool: paste a Gemini key (get one free at
 [Google AI Studio](https://aistudio.google.com/apikey)), and submit a question. Watch the
 live pipeline (search → read sources in parallel → synthesize), then read the cited
 report with a clickable source list. Reports persist to `research.db` (SQLite) and are
@@ -69,7 +70,7 @@ db.py                  SQLite persistence for past reports + aggregate stats
 jobs.py                 background job runner + SSE progress streaming
 app.py                   Flask routes (pages + JSON/SSE API), error handlers
 logging_config.py         structured console logging
-templates/               server-rendered HTML (sidebar shell, new/history/report pages)
+templates/               server-rendered HTML (landing page + sidebar-shell app pages)
 static/                   CSS/JS for the frontend (vanilla, no build step)
 tests/                    pytest suite (db, retry, agent pipeline, Flask routes)
 main.py                 CLI entry point

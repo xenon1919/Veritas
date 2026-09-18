@@ -18,7 +18,7 @@
         <span class="brand-name">Veritas<small>Web Research Agent</small></span>
       </a>
       <nav class="nav">
-        <a class="nav-link {% block nav_new %}{% endblock %}" href="/">
+        <a class="nav-link {% block nav_new %}{% endblock %}" href="/app">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           New Research
         </a>
@@ -27,7 +27,7 @@
           History
         </a>
       </nav>
-      <div class="sidebar-footer">Powered by Gemini · LangChain</div>
+      <div class="sidebar-footer"><span class="status-dot"></span> Powered by Gemini · LangChain</div>
     </aside>
     <div class="main">
       {% block topbar %}{% endblock %}

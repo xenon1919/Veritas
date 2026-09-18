@@ -10,8 +10,12 @@ def client(tmp_db, monkeypatch):
     return flask_app_module.app.test_client()
 
 
-def test_index_page(client):
+def test_landing_page(client):
     assert client.get("/").status_code == 200
+
+
+def test_app_page(client):
+    assert client.get("/app").status_code == 200
 
 
 def test_history_page(client):
