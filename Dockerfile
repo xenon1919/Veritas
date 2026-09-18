@@ -10,4 +10,4 @@ COPY . .
 ENV FLASK_RUN_HOST=0.0.0.0
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--threads", "4", "app:app"]
+CMD gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 2 --threads 4 app:app
